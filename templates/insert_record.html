@@ -1,0 +1,46 @@
+{% extends "layouts.html" %} 
+
+
+{% block head %}
+    {{ super()}}
+    
+    <!-- Open Graph Meta Tags -->
+    <!-- <meta property="og:title" content="Page Title" />
+    <meta property="og:description" content="Page description" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:locale" content="en_US" /> -->
+    
+    <!-- Twitter Card -->
+    <!-- <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Page Title" />
+    <meta name="twitter:description" content="Page description" />
+    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta name="twitter:site" content="@YourHandle" />
+    <meta name="twitter:creator" content="@_aayush_neupane" /> -->
+
+{% endblock %}
+    
+{% block title %}Insert Record - Our Web Application{% endblock %}
+
+
+{% block content %}
+    <h1>Insert Record of student </h1>
+
+    <form method="POST" action="/insert_record"> 
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"  required> <br> <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required> <br> <br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <button type="submit">Record Information</button>
+    </form>
+{% endblock %}
+
