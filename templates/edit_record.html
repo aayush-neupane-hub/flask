@@ -23,13 +23,13 @@
 
 {% endblock %}
     
-{% block title %}Insert Record - Our Web Application{% endblock %}
+{% block title %}Edit Record - Our Web Application{% endblock %}
 
 
 {% block content %}
-    <h1>Insert Record of student </h1>
+    <h1>Edit Record of student </h1>
 
-    <form method="POST" action="/insert_record"> 
+    <form method="POST" action="/edit_record"> 
 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"  required> <br> <br>
@@ -40,7 +40,7 @@
         <label for="address">Address:</label>
         <input type="text" id="address" name="address" required><br><br>
 
-        <button type="submit">Record Information</button>
+        <button type="submit">Record Edited Information</button>
     </form>
 {% endblock %}
 

@@ -17,7 +17,7 @@ def create_table():
     cursor.execute(quary)
     conn.commit()
 
-# create_table()    #Create table if not exists in the database
+create_table()    # Create table if not exists in the database
 
 app = Flask(__name__)
 
@@ -57,9 +57,11 @@ def delete(id):
     return redirect(url_for("home"))
 
 
+
 @app.route("/edit/<int:id>",methods=["POST","GET"])
 def edit(id):
     quary = "SELECT * FROM users WHERE id = ?"
+    cursor.execute(quary,(id,))
     user = cursor.fetchone()
     if request.method == "POST":
         name = request.form.get("name")
