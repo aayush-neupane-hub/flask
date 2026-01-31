@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request,redirect,url_for
 
-import  sqlite3 as sql
+import sqlite3 as sql
 
 conn = sql.connect("database.db",check_same_thread=False)
 cursor = conn.cursor()
